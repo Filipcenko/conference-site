@@ -1,0 +1,244 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Навигация */
+header {
+    background-color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Страницы */
+.page {
+    display: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: calc(100vh - 100px);
+}
+
+.page.active {
+    display: block;
+}
+
+/* Герой-секция */
+#hero {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#hero h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+#hero img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+/* Сетка возможностей */
+#features h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature {
+    flex-basis: 30%;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Страница О платформе */
+#about h2 {
+    color: #2c3e50;
+    margin: 1rem 0;
+}
+
+#about img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+#about ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+/* Детальные возможности */
+.feature-detailed {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-item {
+    flex-basis: 48%;
+    text-align: center;
+}
+
+.feature-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+/* Контакты */
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Карта сайта */
+#sitemap ul {
+    list-style-type: none;
+}
+
+#sitemap ul li {
+    margin-bottom: 0.5rem;
+}
+
+#sitemap ul li a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* 404 страница */
+#error-404 {
+    text-align: center;
+}
+
+#error-404 img {
+    max-width: 100%;
+    margin: 2rem 0;
+}
+
+/* Подвал */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .feature-grid, .feature-detailed {
+        flex-direction: column;
+    }
+
+    .feature, .feature-item {
+        margin-bottom: 1rem;
+        flex-basis: 100%;
+    }
+}
